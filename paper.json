@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24415607",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24415608",
     "lean_source": {
       "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
       "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"

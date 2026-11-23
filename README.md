@@ -5,13 +5,15 @@
 Extending Crocker's Fermat-number covering argument (1971, Lemma I, p. 104), we prove the conjecture posed by Thomas Ordowski in the first COMMENTS line of OEIS A369378, revision 40 (13 February 2024): 2^(2^n+1)-1+2^k is not prime when n>0 and 0<=k<2^n. The divisor is the Fermat number indexed by the exponent of 2 in k>0; the case k=0 is a power of 2. An exact greatest-common-divisor identity extends the obstruction to every positive k not divisible by 2^n and gives the corresponding restriction for absolute differences from 2^(2^n-1)-1. The latter recovers a special case of Crocker's 1971 Lemma I and isolates the residue class not covered in Ordowski's related absolute-difference conjecture. The arguments do not require Fermat numbers to be prime.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24415608](https://doi.org/10.5281/zenodo.24415608)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24415607](https://doi.org/10.5281/zenodo.24415607)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [ordowski](https://mathesis-omega-research.apps.chrono-ai.fun/papers/ordowski?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/ordowski?version=2
+Haobo Ma, Wenlin Zhang (2026). Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method. Mathesis, version 2. https://doi.org/10.5281/zenodo.24415608
 
 ## Statement progress
 
