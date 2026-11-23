@@ -1,0 +1,15 @@
+{
+  "id": "ordowski",
+  "revision": 2,
+  "problem_ids": ["ordowski"],
+  "topic": "Ordowski's least prime offsets and a Fermat-number covering",
+  "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Crocker's Fermat-number covering argument (1971, Lemma I, p. 104), we prove the conjecture posed by Thomas Ordowski in the first COMMENTS line of OEIS A369378, revision 40 (13 February 2024): 2^(2^n+1)-1+2^k is not prime when n>0 and 0<=k<2^n. The divisor is the Fermat number indexed by the exponent of 2 in k>0; the case k=0 is a power of 2. An exact greatest-common-divisor identity extends the obstruction to every positive k not divisible by 2^n and gives the corresponding restriction for absolute differences from 2^(2^n-1)-1. The latter recovers a special case of Crocker's 1971 Lemma I and isolates the residue class not covered in Ordowski's related absolute-difference conjecture. The arguments do not require Fermat numbers to be prime.",
+  "summary": "For n>=1, every positive prime offset is divisible by 2^n. Exact gcd identities describe the Fermat-number obstruction for both sums and absolute differences; the full related absolute-difference conjecture remains outside this coverage.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+}

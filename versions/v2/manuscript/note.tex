@@ -1,0 +1,333 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\vTwo}{\nu_2}
+\title{Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method}
+\author{Haobo Ma\\
+  \small ChronoAI Pte Ltd, Singapore
+  \and Wenlin Zhang\\
+  \small National University of Singapore\\
+  \small ChronoAI Pte Ltd, Singapore}
+\date{16 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Crocker's Fermat-number covering argument (1971, Lemma I, p.~104),
+we prove the conjecture posed by Thomas Ordowski in the first COMMENTS line
+of OEIS A369378, revision 40 (13 February 2024):
+$2^{2^n+1}-1+2^k$ is not prime when $n>0$ and $0\leq k<2^n$.
+The divisor is the Fermat number indexed by the exponent of $2$ in $k>0$;
+the case $k=0$ is a power of $2$.
+An exact greatest-common-divisor identity extends the obstruction to every
+positive $k$ not divisible by $2^n$ and gives the corresponding restriction
+for absolute differences from $2^{2^n-1}-1$.
+The latter recovers a special case of Crocker's 1971 Lemma I and isolates
+the residue class not covered in Ordowski's related absolute-difference
+conjecture. The arguments do not require Fermat numbers to be prime.
+\end{abstract}
+
+\section{The question and its arithmetic setting}
+Throughout, $\NN=\{0,1,2,\ldots\}$. For $n\geq1$, write
+\[
+ L=2^n,\qquad M_n=2^L-1,\qquad
+ A_n=2^{L+1}-1,\qquad B_n=2^{L-1}-1,
+ \qquad F_j=2^{2^j}+1.
+\]
+OEIS A369378 defines $a(n)$ as the least exponent $k$ for which $A_n+2^k$
+is prime, with value $-1$ if there is no such exponent \cite{oeis}.
+Its first comment states: ``Conjecture: if $n>0$, then
+$2^{2^n+1}-1+2^k$ is not prime for every $k<2^n$.''
+The conjecture therefore predicts a lower bound for any existing value.
+Our organizing result gives the entire common divisor with $M_n$, rather
+than a finite list of factors.
+
+The method is the classical Fermat-number covering argument: an odd
+multiple of $2^j$ in an exponent produces the factor $F_j$.
+Crocker uses this mechanism for differences of two distinct powers
+\cite[Lemma I, p.~104]{crocker}; Pan recalls the same congruence
+\cite[Introduction, p.~1]{pan}. Ding, Sun, and Zhao state the corresponding
+congruence and multiplicative-order facts explicitly
+\cite[Lemmas 2.1--2.2]{ding}.
+Here the gain is an exact divisor formula for Ordowski's two specific
+families and a direct deduction of the prime-offset conjecture.
+
+For $r\geq1$, let $\vTwo(r)$ be the unique $j\geq0$ such that
+$r=2^j u$ with $u$ odd. Define
+\[
+ G_n(r)=
+ \begin{cases}
+  F_{\vTwo(r)},&r\geq1\text{ and }2^n\nmid r,\\
+  1,&2^n\mid r.
+ \end{cases}
+\]
+The second case includes $r=0$; no value of $\vTwo(0)$ is needed.
+
+\begin{theorem}\label{thm:gcd}
+For every $n\geq1$ and $k,m\geq0$,
+\begin{align}
+ \gcd(A_n+2^k,M_n)&=G_n(k),\label{eq:plus}\\
+ \gcd(\lvert B_n-2^m\rvert,M_n)&=G_n(m+1).\label{eq:minus}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Repeatedly factoring a difference of squares gives
+\begin{equation}\label{eq:product}
+ M_n=\prod_{i=0}^{n-1}F_i.
+\end{equation}
+These factors are pairwise coprime: for $i<j$, the same identity gives
+$F_j=2+\prod_{h<j}F_h$, so any common divisor of $F_i$ and $F_j$ divides
+$2$; both numbers are odd.
+
+We first compute $\gcd(1+2^r,M_n)$ for $r\geq0$.
+If $2^n\mid r$, then $2^r\equiv1\pmod {M_n}$, including when $r=0$.
+Thus this greatest common divisor is $\gcd(2,M_n)=1$.
+Otherwise $r>0$ and $j=\vTwo(r)<n$. As $2^{2^j}\equiv-1\pmod {F_j}$
+and $r/2^j$ is odd, the entire number $F_j$ divides $1+2^r$.
+
+No other $F_i$ has a common prime factor with $1+2^r$.
+Indeed, if a prime $p\mid F_i$, then $p$ is odd and the multiplicative
+order of $2$ modulo $p$ is exactly $2^{i+1}$:
+it divides $2^{i+1}$ but does not divide $2^i$, since
+$2^{2^i}\equiv-1\not\equiv1\pmod p$.
+If also $p\mid1+2^r$, then the order divides $2r$ but not $r$.
+Writing $r=2^j u$ with $u$ odd forces $i=j$.
+Pairwise coprimality and \eqref{eq:product} now show
+\begin{equation}\label{eq:basic}
+ \gcd(1+2^r,M_n)=G_n(r).
+\end{equation}
+This proves the exact equality even if some $F_i$ are composite or
+have repeated prime factors.
+
+Finally, $A_n\equiv1\pmod {M_n}$, so \eqref{eq:basic} with $r=k$
+proves \eqref{eq:plus}. Since
+$2(B_n-2^m)\equiv-(1+2^{m+1})\pmod {M_n}$ and $M_n$ is odd,
+multiplication by $2$ and a change of sign do not change the greatest
+common divisor. Equation \eqref{eq:basic} with $r=m+1$ proves
+\eqref{eq:minus}.
+\end{proof}
+
+\section{Prime offsets and boundary cases}
+\begin{corollary}\label{cor:ordowski}
+If $n\geq1$ and $k>0$ is not divisible by $2^n$, then $A_n+2^k$
+is composite, with proper divisor $F_{\vTwo(k)}$.
+The number $A_n+1$ is also composite.
+In particular, Ordowski's conjecture holds, and every existing value
+$a(n)$ for $n\geq1$ is a positive multiple of $2^n$.
+\end{corollary}
+\begin{proof}
+For $k>0$ with $j=\vTwo(k)<n$, Theorem~\ref{thm:gcd} supplies the divisor.
+It is proper because
+\[
+ 1<F_j\leq2^{2^{n-1}}+1
+   <2^{2^n+1}+1\leq A_n+2^k.
+\]
+At $k=0$, the value is $2^{2^n+1}$, a power of $2$ with exponent
+at least $3$. Every $0<k<2^n$ satisfies $2^n\nmid k$, proving the
+original assertion. The same argument excludes every other positive
+exponent except multiples of $2^n$.
+\end{proof}
+
+The bound is attained at $n=1,2$: the least-prime-offset values are
+$a(1)=2$ and $a(2)=4$, giving the primes $11$ and $47$.
+It need not be attained: $A_3+2^8=767=13\cdot59$, whereas $a(3)=16$
+and $A_3+2^{16}=66047$ is prime.
+Thus the divisibility condition is necessary, not sufficient.
+For $n=0$, outside the conjecture, the least exponent is $a(0)=1$.
+These small values follow by exact trial division in the accompanying
+checker and agree with the OEIS data \cite{oeis}.
+
+\section{The related absolute-difference question}
+\begin{corollary}\label{cor:negative}
+Let $n\geq3$ and $m>0$. If $2^n\nmid m+1$, then
+$\lvert B_n-2^m\rvert$ is composite, with proper divisor
+$F_{\vTwo(m+1)}$. In particular,
+\[
+ B_n-2^m>0\quad\Longrightarrow\quad B_n-2^m
+ \text{ is composite}.
+\]
+\end{corollary}
+\begin{proof}
+The divisor follows from \eqref{eq:minus}. Write $L=2^n\geq8$.
+For $1\leq m\leq L-2$,
+\[
+ B_n-2^m\geq2^{L-2}-1
+  \geq2^{L/2+1}-1>2^{L/2}+1\geq F_{\vTwo(m+1)},
+\]
+where $L-2\geq L/2+1$ and $L/2\geq4$.
+For $m\geq L$, the absolute difference is at least
+$2^L-(2^{L-1}-1)=2^{L-1}+1>2^{L/2}+1$.
+These are all cases allowed by $L\nmid m+1$, since $m=L-1$ is excluded.
+Finally, a positive difference requires $m\leq L-2$, in which case
+$1<m+1<L$ and the divisibility hypothesis holds.
+\end{proof}
+
+The positive-difference assertion is already a special case of
+Crocker's Lemma I \cite[p.~104]{crocker}: use
+\[
+ B_n-2^m=(2^{2^n}-1)-2^{2^n-1}-2^m,
+ \qquad 1\leq m<2^n-1.
+\]
+The two exponents in Crocker's lemma are $2^n-1$ and $m$;
+both are positive and they are distinct.
+Ordowski's stronger conjecture in A369378 and A369375 asks that the
+absolute difference be nonprime for \emph{all} $m>0$ when $n>5$
+\cite{oeis,negative}. The remaining class is $m\equiv-1\pmod {2^n}$;
+our divisor identity gives greatest common divisor $1$ there.
+At $m=2^n-1$ the absolute difference is $1$, hence nonprime, but this
+does not decide the rest of that class. Nor does the argument prove that
+$A_n$ or $B_n$ is a dual Sierpi\'nski or dual Riesel number.
+
+\begin{corollary}\label{cor:reverse}
+Define $b(n)$ as in the fourth COMMENTS line of A369378: the least $k$
+such that $2^k-B_n$ is prime. If $n\geq3$ and $b(n)$ exists, then
+\[
+ b(n)\equiv-1\pmod {2^n},\qquad b(n)\geq2^{n+1}-1.
+\]
+\end{corollary}
+\begin{proof}
+Indeed, positivity requires $k\geq2^n-1$, the value at $k=2^n-1$ is
+$1$, and Corollary~\ref{cor:negative} excludes every other residue class.
+The next admissible exponent in that class is $2^{n+1}-1$.
+\end{proof}
+
+\begin{corollary}\label{cor:wu}
+For $j\geq3$, put $d=2^j-2$. Then $2^{d+1}-2^k-1$ is composite
+for every $0\leq k<d$. Thus Chai Wah Wu's conjecture in the third
+COMMENTS line of A138290 is true. Also $2^j-1$ belongs to A369375
+and $\mathrm{A208083}(2^j-1)=0$ \cite{wu,negative,count}.
+\end{corollary}
+\begin{proof}
+The expression is $B_j-2^k$. For $1\leq k<d$, apply
+Corollary~\ref{cor:negative}. At $k=0$ it equals
+$2^{2^j-1}-2=2(2^{2^j-2}-1)>2$ and is even.
+The same argument covers $1\leq k\leq2^j-2$, exactly the prime-count
+range in A208083 and the positive-power range for A369375.
+\end{proof}
+Wu posed the conjecture on 7 September 2021; Ordowski recorded its
+proof via A369375 on 20 March 2024 \cite{wu}. That proof already follows
+from Crocker's 1971 lemma. The iteration $u\mapsto2u+1$ starting
+from $u=7$ in A369375 yields $2^{t+3}-1$, $t\geq0$, so its claimed
+infinite subsequence follows too. This does not decide the suggested
+iteration starting from $27$.
+
+\section{Scope of the source comments}
+The emptiness of $S3$ and $S4$ in the directly linked A076336 was
+proved by Don Reble in correspondence of 9 September 2022, as recorded
+by Richard J. Mathar on 8 January 2024 \cite{reble,sierpinski}.
+The following proof supplies explicit infinite progressions.
+\begin{proposition}\label{prop:families}
+For every positive integer $C$, each of the families
+$C2^k+1$ and $C+2^k$, $k\geq1$, has infinitely many composite terms.
+Consequently the sets labelled $S3$ and $S4$ in A076336 are empty.
+\end{proposition}
+\begin{proof}
+Choose an odd prime $p\mid2C+1$. For every integer $t\geq1$, put
+$k=1+t(p-1)$. Fermat's little theorem gives $2^k\equiv2\pmod p$,
+so $p\mid C2^k+1$, while $C2^k+1>2C+1\geq p$.
+If $C$ is odd, for the second family choose an odd prime $q\mid C+2$ and use
+$k=1+t(q-1)$; then $q\mid C+2^k$ and $C+2^k>C+2\geq q$.
+The exponents in each progression are distinct.
+If $C$ is even, every $C+2^k$, $k\geq1$, is even and at least $4$.
+\end{proof}
+
+\noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.65\linewidth}@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+A369378 rev.~40, COMMENTS 1 & Proved: Corollary~\ref{cor:ordowski}, including $k=0$; exact gcd in Theorem~\ref{thm:gcd}.\\[3pt]
+A369378, least-offset definition and data & Positive multiples of $2^n$ are necessary; $a(0),\ldots,a(3)$ checked. Existence for every $n$ is not established.\\[3pt]
+A369378, Sierpi\'nski implication and numerical lower bounds & Conditional interpretation retained; all-exponent nonprimality and the quoted large searches are not established here.\\[3pt]
+A369378/A369375, absolute-difference conjecture & Corollary~\ref{cor:negative} covers all but $m\equiv-1\pmod {2^n}$; the full conjecture is not covered. Positive differences are covered by Crocker's prior lemma.\\[3pt]
+A369378 rev.~40, COMMENTS 4, reverse offset $b(n)$ & Proved necessary bound in Corollary~\ref{cor:reverse}; existence and the listed data are not covered.\\[3pt]
+A369375 rev.~61, COMMENTS 3--6 and final comment; A138290 rev.~47, COMMENTS 3--4 & Reproved; prior proof Crocker, 1971, and Ordowski, 2024. Corollary~\ref{cor:wu} covers Wu's conjecture and the iteration from $7$; the iteration from $27$ is not covered.\\[3pt]
+A208083 rev.~23, definition & Proved zero at every input $2^j-1$, $j\geq3$, by Corollary~\ref{cor:wu}; same prior proof.\\[3pt]
+A076336 rev.~179, $S3$ and $S4$ & Reproved; prior proof Reble, 2022, recorded by Mathar, 2024. Proposition~\ref{prop:families} gives infinite composite progressions for all positive $C$. Other Sierpi\'nski conjectures are not covered.\\[3pt]
+A101036 rev.~128; A156695 rev.~75 & Riesel-power and additive-representation questions, including their questions about a constant $K$, are not covered.\\
+\bottomrule
+\end{tabular}
+
+\section{Formal statement and finite calculations}
+The pinned Lean file
+\href{https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean}{\texttt{OeisA369378FermatCovering.lean}}
+defines \texttt{claim} as
+\[
+ \forall n,k\in\NN,\quad 0<n\ \Longrightarrow\ k<2^n\ \Longrightarrow\
+ \neg\operatorname{Prime}(2^{2^n+1}-1+2^k).
+\]
+In the namespace \texttt{D5.S3.Arith.Primes.OeisA369378FermatCovering},
+\texttt{result : claim} is the formal proof of precisely this statement.
+The file also contains the prime examples $11$ and $47$.
+Theorem~\ref{thm:gcd}, the unrestricted-exponent extension in
+Corollary~\ref{cor:ordowski}, Corollaries~\ref{cor:negative}--\ref{cor:wu}, and
+Proposition~\ref{prop:families} have the written proofs above; they are
+not additional claims of that Lean declaration.
+
+The Python 3 program \texttt{verify.py} uses integer arithmetic to check
+both greatest-common-divisor identities for $1\leq n\leq12$ and
+$0\leq k,m<4\cdot2^n$, the proper-divisor conclusions on the corresponding
+admissible inputs, and all original cases $0\leq k<2^n$.
+It recomputes $a(0),\ldots,a(3)$ by trial division and checks finite
+instances of Corollary~\ref{cor:wu} for $3\leq j\leq12$ and
+Proposition~\ref{prop:families} for $1\leq C\leq99$. These are finite
+calculations; the all-input assertions follow from the written proofs.
+
+\begin{thebibliography}{9}
+\bibitem{oeis} T. Ordowski,
+\emph{A369378: Least $k$ such that $2^{2^n+1}-1+2^k$ is prime},
+The On-Line Encyclopedia of Integer Sequences, revision 40,
+13 February 2024; entry created 22 January 2024.
+\url{https://oeis.org/A369378}.
+
+\bibitem{crocker} R. Crocker,
+On the sum of a prime and of two powers of two,
+\emph{Pacific J. Math.} \textbf{36} (1971), 103--107.
+\href{https://doi.org/10.2140/pjm.1971.36.103}{doi:10.2140/pjm.1971.36.103}.
+
+\bibitem{pan} H. Pan,
+\emph{On the integers not of the form $p+2^a+2^b$},
+arXiv:0905.3809v4, 7 July 2009.
+\url{https://arxiv.org/abs/0905.3809v4}.
+
+\bibitem{ding} Y. Ding, Y.-C. Sun, and L. Zhao,
+\emph{An improved lower bound for odd integers not of the form $p+2^a+2^b$},
+arXiv:2607.05357 (2026), Lemmas 2.1--2.2.
+\url{https://arxiv.org/abs/2607.05357}.
+
+\bibitem{negative} T. Ordowski,
+\emph{A369375: Mersenne numbers that are de Polignac numbers},
+The On-Line Encyclopedia of Integer Sequences, revision 61,
+19 March 2024. \url{https://oeis.org/A369375}.
+
+\bibitem{sierpinski} N. J. A. Sloane and contributors,
+\emph{A076336: Provable Sierpi\'nski numbers},
+The On-Line Encyclopedia of Integer Sequences, revision 179,
+15 May 2026. \url{https://oeis.org/A076336}.
+
+\bibitem{reble} R. J. Mathar, \emph{OEIS A076336},
+8 January 2024, Sections 1--2, recording Don Reble's proofs of
+9 September 2022. \url{https://oeis.org/A076336/a076336.pdf}.
+
+\bibitem{wu} T. D. Noe and contributors,
+\emph{A138290: Numbers $m$ such that $2^{m+1}-2^k-1$ is composite
+for all $0\leq k<m$}, revision 47, 23 March 2024;
+COMMENTS 3--4: Chai Wah Wu's conjecture (7 September 2021)
+and Thomas Ordowski's proof pointer (20 March 2024).
+\url{https://oeis.org/A138290}.
+
+\bibitem{count} R. Zumkeller and contributors,
+\emph{A208083: Number of primes of the form $2^n-2^k-1$, $1\leq k<n$},
+revision 23, 21 December 2022. \url{https://oeis.org/A208083}.
+\end{thebibliography}
+\medskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International (CC BY 4.0)}.
+\end{document}

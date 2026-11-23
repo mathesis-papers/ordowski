@@ -1,0 +1,11 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "ordowski",
+  "version": 2,
+  "repository_url": "https://github.com/mathesis-papers/ordowski",
+  "site_url": "https://papers.trureturing.org/ordowski/",
+  "doi": null,
+  "reading": {},
+  "slides": [],
+  "visualizations": []
+}

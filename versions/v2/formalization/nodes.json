@@ -1,0 +1,244 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:ordowski:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+      },
+      "lineage": "collected:ordowski:s1",
+      "macros": {
+        "\\NN": "\\mathbb{N}",
+        "\\vTwo": "\\nu_2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ordowski",
+      "scope": "in_scope",
+      "statement": "For every $n\\geq1$ and $k,m\\geq0$,\n\\begin{align}\n \\gcd(A_n+2^k,M_n)&=G_n(k),\\\\\n \\gcd(\\lvert B_n-2^m\\rvert,M_n)&=G_n(m+1).\n\\end{align}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+      "toolchain": null,
+      "version": 2,
+      "work": "ordowski"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:ordowski:2:s2",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+      },
+      "lineage": "collected:ordowski:s2",
+      "macros": {
+        "\\NN": "\\mathbb{N}",
+        "\\vTwo": "\\nu_2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ordowski",
+      "scope": "in_scope",
+      "statement": "If $n\\geq1$ and $k>0$ is not divisible by $2^n$, then $A_n+2^k$\nis composite, with proper divisor $F_{\\vTwo(k)}$.\nThe number $A_n+1$ is also composite.\nIn particular, Ordowski's conjecture holds, and every existing value\n$a(n)$ for $n\\geq1$ is a positive multiple of $2^n$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+      "toolchain": null,
+      "version": 2,
+      "work": "ordowski"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:ordowski:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+      },
+      "lineage": "collected:ordowski:s3",
+      "macros": {
+        "\\NN": "\\mathbb{N}",
+        "\\vTwo": "\\nu_2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ordowski",
+      "scope": "in_scope",
+      "statement": "Let $n\\geq3$ and $m>0$. If $2^n\\nmid m+1$, then\n$\\lvert B_n-2^m\\rvert$ is composite, with proper divisor\n$F_{\\vTwo(m+1)}$. In particular,\n\\[\n B_n-2^m>0\\quad\\Longrightarrow\\quad B_n-2^m\n \\text{ is composite}.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+      "toolchain": null,
+      "version": 2,
+      "work": "ordowski"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:ordowski:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+      },
+      "lineage": "collected:ordowski:s4",
+      "macros": {
+        "\\NN": "\\mathbb{N}",
+        "\\vTwo": "\\nu_2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ordowski",
+      "scope": "in_scope",
+      "statement": "Define $b(n)$ as in the fourth COMMENTS line of A369378: the least $k$\nsuch that $2^k-B_n$ is prime. If $n\\geq3$ and $b(n)$ exists, then\n\\[\n b(n)\\equiv-1\\pmod {2^n},\\qquad b(n)\\geq2^{n+1}-1.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+      "toolchain": null,
+      "version": 2,
+      "work": "ordowski"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:ordowski:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+      },
+      "lineage": "collected:ordowski:s5",
+      "macros": {
+        "\\NN": "\\mathbb{N}",
+        "\\vTwo": "\\nu_2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ordowski",
+      "scope": "in_scope",
+      "statement": "For $j\\geq3$, put $d=2^j-2$. Then $2^{d+1}-2^k-1$ is composite\nfor every $0\\leq k<d$. Thus Chai Wah Wu's conjecture in the third\nCOMMENTS line of A138290 is true. Also $2^j-1$ belongs to A369375\nand $\\mathrm{A208083}(2^j-1)=0$ \\cite{wu,negative,count}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+      "toolchain": null,
+      "version": 2,
+      "work": "ordowski"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:ordowski:2:s6",
+      "kind": "paper",
+      "label": "Proposition",
+      "lean_source": {
+        "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+      },
+      "lineage": "collected:ordowski:s6",
+      "macros": {
+        "\\NN": "\\mathbb{N}",
+        "\\vTwo": "\\nu_2"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ordowski",
+      "scope": "in_scope",
+      "statement": "For every positive integer $C$, each of the families\n$C2^k+1$ and $C+2^k$, $k\\geq1$, has infinitely many composite terms.\nConsequently the sets labelled $S3$ and $S4$ in A076336 are empty.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+      "toolchain": null,
+      "version": 2,
+      "work": "ordowski"
+    }
+  ]
+}

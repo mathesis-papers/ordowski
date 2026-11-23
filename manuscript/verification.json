@@ -1,0 +1,175 @@
+{
+  "arithmetic": "Exact Python integers, Euclidean gcd, exhaustive trial division for the listed least offsets.",
+  "counts": {
+    "all_prime_family_composite_terms": 990,
+    "mersenne_prime_count_zero_inputs": 10,
+    "minus_gcd_pairs": 32760,
+    "minus_proper_divisors": 32686,
+    "original_conjecture_pairs": 8190,
+    "plus_gcd_pairs": 32760,
+    "plus_proper_divisors": 32712,
+    "positive_difference_pairs": 8164,
+    "wu_conjecture_pairs": 8164
+  },
+  "coverage": "Finite calculations for the stated ranges; universal claims are proved in note.tex.",
+  "least_offsets": {
+    "0": 1,
+    "1": 2,
+    "2": 4,
+    "3": 16
+  },
+  "ranges": {
+    "absolute_difference": "3 <= n <= 12; 0 < m < 4*2^n; 2^n does not divide m+1",
+    "all_prime_families": "All positive C from 1 through 99; progression parameters t from 1 through 5",
+    "gcd_identities": "1 <= n <= 12; 0 <= k,m < 4*2^n",
+    "mersenne_prime_count_zero": "Inputs 2^j-1 for 3 <= j <= 12",
+    "original_conjecture": "1 <= n <= 12; 0 <= k < 2^n",
+    "wu_conjecture": "3 <= j <= 12; 0 <= k < 2^j-2"
+  },
+  "status": "PASS",
+  "trial_division_certificates": {
+    "0": [
+      {
+        "exponent": 0,
+        "smallest_divisor": 2,
+        "value": 4
+      },
+      {
+        "exponent": 1,
+        "smallest_divisor": 5,
+        "value": 5
+      }
+    ],
+    "1": [
+      {
+        "exponent": 0,
+        "smallest_divisor": 2,
+        "value": 8
+      },
+      {
+        "exponent": 1,
+        "smallest_divisor": 3,
+        "value": 9
+      },
+      {
+        "exponent": 2,
+        "smallest_divisor": 11,
+        "value": 11
+      }
+    ],
+    "2": [
+      {
+        "exponent": 0,
+        "smallest_divisor": 2,
+        "value": 32
+      },
+      {
+        "exponent": 1,
+        "smallest_divisor": 3,
+        "value": 33
+      },
+      {
+        "exponent": 2,
+        "smallest_divisor": 5,
+        "value": 35
+      },
+      {
+        "exponent": 3,
+        "smallest_divisor": 3,
+        "value": 39
+      },
+      {
+        "exponent": 4,
+        "smallest_divisor": 47,
+        "value": 47
+      }
+    ],
+    "3": [
+      {
+        "exponent": 0,
+        "smallest_divisor": 2,
+        "value": 512
+      },
+      {
+        "exponent": 1,
+        "smallest_divisor": 3,
+        "value": 513
+      },
+      {
+        "exponent": 2,
+        "smallest_divisor": 5,
+        "value": 515
+      },
+      {
+        "exponent": 3,
+        "smallest_divisor": 3,
+        "value": 519
+      },
+      {
+        "exponent": 4,
+        "smallest_divisor": 17,
+        "value": 527
+      },
+      {
+        "exponent": 5,
+        "smallest_divisor": 3,
+        "value": 543
+      },
+      {
+        "exponent": 6,
+        "smallest_divisor": 5,
+        "value": 575
+      },
+      {
+        "exponent": 7,
+        "smallest_divisor": 3,
+        "value": 639
+      },
+      {
+        "exponent": 8,
+        "smallest_divisor": 13,
+        "value": 767
+      },
+      {
+        "exponent": 9,
+        "smallest_divisor": 3,
+        "value": 1023
+      },
+      {
+        "exponent": 10,
+        "smallest_divisor": 5,
+        "value": 1535
+      },
+      {
+        "exponent": 11,
+        "smallest_divisor": 3,
+        "value": 2559
+      },
+      {
+        "exponent": 12,
+        "smallest_divisor": 17,
+        "value": 4607
+      },
+      {
+        "exponent": 13,
+        "smallest_divisor": 3,
+        "value": 8703
+      },
+      {
+        "exponent": 14,
+        "smallest_divisor": 5,
+        "value": 16895
+      },
+      {
+        "exponent": 15,
+        "smallest_divisor": 3,
+        "value": 33279
+      },
+      {
+        "exponent": 16,
+        "smallest_divisor": 66047,
+        "value": 66047
+      }
+    ]
+  }
+}

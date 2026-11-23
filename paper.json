@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 81129,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "be046af7c9fcee71b06b0eea4dbb18c219fabf7c4a1aed5b9c256d362f99a17b",
+      "sha256": "be046af7c9fcee71b06b0eea4dbb18c219fabf7c4a1aed5b9c256d362f99a17b"
+    },
+    "source": {
+      "bytes": 11587,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "9a7a4910253b83791676d994f24d83805bca2698dac4e98dcc38233b65cd41f0",
+      "sha256": "9a7a4910253b83791676d994f24d83805bca2698dac4e98dcc38233b65cd41f0"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending Crocker's Fermat-number covering argument (1971, Lemma I, p. 104), we prove the conjecture posed by Thomas Ordowski in the first COMMENTS line of OEIS A369378, revision 40 (13 February 2024): 2^(2^n+1)-1+2^k is not prime when n>0 and 0<=k<2^n. The divisor is the Fermat number indexed by the exponent of 2 in k>0; the case k=0 is a power of 2. An exact greatest-common-divisor identity extends the obstruction to every positive k not divisible by 2^n and gives the corresponding restriction for absolute differences from 2^(2^n-1)-1. The latter recovers a special case of Crocker's 1971 Lemma I and isolates the residue class not covered in Ordowski's related absolute-difference conjecture. The arguments do not require Fermat numbers to be prime.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 81129,
+      "sha256": "be046af7c9fcee71b06b0eea4dbb18c219fabf7c4a1aed5b9c256d362f99a17b",
+      "url": "/api/v1/collected-papers/ordowski/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T17:23:20.534086569Z",
+    "record": "ordowski",
+    "repository_name": "ordowski",
+    "source": {
+      "bytes": 11587,
+      "sha256": "9a7a4910253b83791676d994f24d83805bca2698dac4e98dcc38233b65cd41f0",
+      "url": "/api/v1/collected-papers/ordowski/files/source?version=2"
+    },
+    "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T17:23:20.534086569Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "ordowski"
+  }
+}
