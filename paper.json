@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24415607",
     "current_version": 2,
     "doi": "10.5281/zenodo.24415608",
+    "kind": "note",
     "lean_source": {
       "revision": "a89e0fb9ba0f9002502ec8125455c2c2a9281443",
       "url": "https://github.com/the-omega-institute/trureturing/blob/a89e0fb9ba0f9002502ec8125455c2c2a9281443/D5/S3/Arith/Primes/OeisA369378FermatCovering.lean"
@@ -55,10 +56,12 @@
     "title": "Exact Fermat-divisor formulas for Ordowski's prime-offset conjecture, extending Crocker's covering method",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T17:23:20.534086569Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "ordowski"
